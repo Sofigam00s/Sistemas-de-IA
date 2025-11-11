@@ -85,9 +85,10 @@ def ejecutar():
         if opcion == "1":
             respuestas = np.random.randint(-3, 4, size=60).tolist()
             tipo_objetivo = input("Ingrese un tipo MBTI objetivo (por ej. ENFP, INTJ): ").upper()
-            resultado = agente.analizar(respuestas, tipo_objetivo)
+            resultado = agente.analizar_completo(respuestas, tipo_objetivo)
             print("\n🧠 Resultado completo:\n")
             print(json.dumps(resultado, indent=4, ensure_ascii=False))
+
 
         elif opcion == "2":
             print("\nIngrese 60 respuestas del test (-3 a +3).")
@@ -105,7 +106,7 @@ def ejecutar():
                     except ValueError:
                         print("⚠️ Ingrese un número entre -3 y 3.")
             tipo_objetivo = input("\nIngrese un tipo MBTI objetivo: ").upper()
-            resultado = agente.analizar(respuestas, tipo_objetivo)
+            resultado = agente.analizar_completo(respuestas, tipo_objetivo)
             print("\n🧠 Resultado completo:\n")
             print(json.dumps(resultado, indent=4, ensure_ascii=False))
 
