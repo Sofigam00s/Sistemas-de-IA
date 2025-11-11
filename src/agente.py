@@ -64,3 +64,4 @@ if __name__ == "__main__":
     resultado = agente.analizar_completo(respuestas_ejemplo, tipo_objetivo="ENFP")
 
     print(json.dumps(resultado, indent=2, ensure_ascii=False))
+
